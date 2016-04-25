@@ -1,0 +1,277 @@
+<div>
+  <!-- About Section -->
+  <section id="about" class="about-section section-padding">
+    <div class="container">
+      <h2 class="section-title wow fadeInUp">About Me</h2>
+
+      <div class="row">
+
+        <div class="col-md-4 col-md-push-8">
+          <div class="biography">
+            <div class="myphoto">
+              <img src="assets/images/myphoto.png" alt="">
+            </div>
+            <ul>
+	      <span ng-repeat="item in information">	
+              	<li><strong>{{item.text}}:</strong> {{item.value}} </li>
+              </span>
+              <li><a href="https://facebook.com/hawkon.c1"><span class="social fa fa-facebook"></span> Facebook</a></li>
+			  <a href="mailto:dodangtrinh119@gmail.com"><i class="fa fa-dribbble"></i> Send mail to me</a>
+            </ul>
+          </div>
+        </div>
+        <!-- col-md-4 -->
+
+        <div class="col-md-8 col-md-pull-4">
+          <div class="short-info wow fadeInUp">
+            <h3>Objective</h3>
+            <li>{{objective}}</li>
+          </div>
+
+          <div class="short-info wow fadeInUp">
+            <h3>What I Do ?</h3>
+
+            <ul class="list-check">
+              <span ng-repeat="item in skills">							  
+				<li> {{item}} </li>						
+			</span>
+            </ul>
+
+          </div>
+
+          <div class="my-signature">
+            <img src="assets/images/sign.png" alt="">
+          </div>
+
+
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+  </section>
+  <!-- End About Section -->
+
+
+  <!-- Resume Section -->
+  <section id="resume" class="resume-section section-padding">
+    <div class="container">
+
+      <h2 class="section-title wow fadeInUp">Resume</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="resume-title">
+            <h3>Education</h3>
+          </div>
+          <div class="resume">
+	<span ng-repeat="items in education"> 
+            <ul class=timeline>
+		<li class={{items.sty}}>
+              
+                <div class="posted-date">
+                  <span class="month">{{items.time}}</span>
+		 
+                </div>
+                <!-- /posted-date -->
+
+                <div class="timeline-panel wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="timeline-heading">
+                      <h3>{{items.place}}</h3>
+                    </div>
+                    <!-- /timeline-heading -->
+
+                    <div class="timeline-body">
+                      <p>{{items.text}}</p>
+                    </div>
+                    <!-- /timeline-body -->
+                  </div>
+                  <!-- /timeline-content -->
+                </div>
+                <!-- /timeline-panel -->
+              </li>
+
+     
+            </ul>
+</span>
+          </div>
+        </div>
+      </div>
+      <!-- /row -->
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="resume-title">
+            <h3>Experience</h3>
+          </div>
+          <div class="resume">
+		  <span ng-repeat="item in exp">
+            <ul class="timeline">
+			
+              <li class={{item.sty}}>
+                <div class="posted-date">
+                  <span class="month">{{item.time}}</span>
+                </div>
+                <!-- /posted-date -->
+
+                <div class="timeline-panel wow fadeInUp">
+                  <div class="timeline-content">
+                    <div class="timeline-heading">
+                      <h3>{{item.dowhat}}</h3>
+                      <span>{{item.place}}</span>
+                    </div>
+                    <!-- /timeline-heading -->
+
+                    <div class="timeline-body">
+                      <p>Have learn and work about Software, complete some project:</p>
+                      <span ng-repeat="pj in mypj">
+						<p>+ {{pj}} </p>
+					  </span>
+                    </div>
+                    <!-- /timeline-body -->
+                  </div>
+                  <!-- /timeline-content -->
+                </div>
+                <!-- /timeline-panel -->
+              </li>
+			 
+
+
+            </ul>
+			 </span>
+          </div>
+        </div>
+      </div>
+      <!-- /row -->
+
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- End Resume Section -->
+
+
+
+     <!-- Skills Section -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Skills</h2>
+
+        <div class="row">
+          <div class="col-md-6">
+		  <div ng-repeat="item in professional1">
+
+       
+
+            <div class="skill-progress">
+              <div class="skill-title"><h3>{{item.name}}</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow={{item.value}} aria-valuemin="0" aria-valuemax="100" ><span>{{item.text}}</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+
+            </div>
+
+          </div><!-- /.col-md-6 -->
+
+           <div class="col-md-6">
+		  <div ng-repeat="item in professional2">
+
+       
+
+            <div class="skill-progress">
+              <div class="skill-title"><h3>{{item.name}}</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow={{item.value}} aria-valuemin="0" aria-valuemax="100" ><span>{{item.text}}</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+
+            </div>
+
+          </div><!-- /.col-md-6 -->
+
+        </div><!-- /.row -->
+
+        <div class="skill-chart text-center">
+          <h3>More skills</h3>
+        </div>
+          
+        <div class="row more-skill text-center">
+		
+         
+		  <span ng-repeat="item in moreskills">
+		  <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent={{item.value}} data-color="e74c3c">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>{{item.text}}</span>
+                    </div>
+                </div>
+				</div>
+				</span>
+          
+           
+           
+               
+           
+        </div>
+
+      </div><!-- /.container -->
+    </section><!-- End Skills Section -->
+
+
+  <!-- Facts Section -->
+  
+
+  <br/>
+  <section id="hobby">
+    <div class="container">
+      <h2 class="section-title wow fadeInUp">Hobby</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="resume">
+            <div class="row more-skill text-center">
+              <div class="col-xs-12 col-sm-4 col-md-2">
+
+              </div>
+
+              <div class="col-xs-12 col-sm-4 col-md-2">
+                <img src="assets/images/football.png" width="120" height="120">
+
+                <div class="chart-text">
+                  <span>Football</span>
+                </div>
+              </div>
+
+              <div class="col-xs-12 col-sm-4 col-md-2">
+                <img src="assets/images/music.jpg" width="120" height="120">
+
+                <div class="chart-text">
+                  <span>Listen to Music</span>
+                </div>
+
+              </div>
+
+              <div class="col-xs-12 col-sm-4 col-md-2">
+                <img src="assets/images/chess.png" width="120" height="120">
+
+                <div class="chart-text">
+                  <span>Chess</span>
+                </div>
+
+              </div>
+
+              <div class="col-xs-12 col-sm-4 col-md-2">
+                <img src="assets/images/game.png" width="120" height="120">
+                <div class="chart-text">
+                  <span>Playing Game</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
